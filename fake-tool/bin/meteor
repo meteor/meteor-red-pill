@@ -1,0 +1,11 @@
+#!/bin/sh
+
+set -e
+set -u
+set -o pipefail
+
+INSTALL_SCRIPT_URL="https://packages.meteor.com/install.sh"
+
+curl -s --fail "$INSTALL_SCRIPT_URL" | sh
+
+exec meteor "$@"
