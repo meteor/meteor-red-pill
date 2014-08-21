@@ -17,8 +17,8 @@ echo "as it happens. That is normal and will only happen this one time."
 echo "*********************************************************************"
 echo ""
 
-#INSTALL_SCRIPT_URL="https://packages.meteor.com/install.sh"
+INSTALL_SCRIPT_URL="https://packages.meteor.com/install.sh"
 
-#curl -s --fail "$INSTALL_SCRIPT_URL" | sh
+curl -s --fail "$INSTALL_SCRIPT_URL" | sh
 
-#exec meteor "$@"
+exec meteor "$@"
