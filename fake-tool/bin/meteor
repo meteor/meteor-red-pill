@@ -1,11 +1,24 @@
 #!/bin/bash
-
 set -e
 set -u
 set -o pipefail
 
-INSTALL_SCRIPT_URL="https://packages.meteor.com/install.sh"
+echo ""
+echo "*********************************************************************"
+echo "Exciting news! The Meteor package system has gotten a major upgrade."
+echo ""
+echo "The Meteor package system is now fully integrated into Meteor"
+echo "(you no longer need to install Meteorite) and officially supported by"
+echo "the Meteor core team."
+echo ""
+echo "Your Meteor install will now be updated to the new system. This may"
+echo "take a few minutes. You may see some unusual or surprising messages"
+echo "as it happens. That is normal and will only happen this one time."
+echo "*********************************************************************"
+echo ""
 
-curl -s --fail "$INSTALL_SCRIPT_URL" | sh
+#INSTALL_SCRIPT_URL="https://packages.meteor.com/install.sh"
 
-exec meteor "$@"
+#curl -s --fail "$INSTALL_SCRIPT_URL" | sh
+
+#exec meteor "$@"
