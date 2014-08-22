@@ -1,7 +1,10 @@
-Maybe increment VERSION here, and if so, update release.json to match.
+If you actually changed the script, update VERSION to a random text-character
+hex string here, and update release.json to match. (release.json! Not the other
+files you have sitting around still)
 
-VERSION=0000000001
-RELEASE_VERSION=0.9.0-rc9
+
+VERSION=f8a73df913
+RELEASE_VERSION=0.9.0-rc11
 START="s3://meteor-warehouse/tools/$VERSION/meteor-tools-$VERSION"
 tar czvf meteor-tools-$VERSION-Darwin_x86_64.tar.gz fake-tool/bin/meteor
 s3cmd -P put meteor-tools-$VERSION-Darwin_x86_64.tar.gz s3://meteor-warehouse/tools/$VERSION/
