@@ -2,16 +2,6 @@ If you actually changed the script, update VERSION to a random text-character
 hex string here, and update release.json to match. (release.json! Not the other
 files you have sitting around still)
 
+Then:
 
-VERSION=f8a73df913
-RELEASE_VERSION=0.9.0-rc12
-START="s3://meteor-warehouse/tools/$VERSION/meteor-tools-$VERSION"
-tar czvf meteor-tools-$VERSION-Darwin_x86_64.tar.gz fake-tool/bin/meteor
-s3cmd -P put meteor-tools-$VERSION-Darwin_x86_64.tar.gz s3://meteor-warehouse/tools/$VERSION/
-s3cmd -P cp "$START-Darwin_x86_64.tar.gz" "$START-Linux_x86_64.tar.gz"
-s3cmd -P cp "$START-Darwin_x86_64.tar.gz" "$START-Linux_i686.tar.gz"
-
-cp release.json ${RELEASE_VERSION}.release.json
-s3cmd -P put ${RELEASE_VERSION}.release.json s3://meteor-warehouse/releases/
-cp release.json METEOR@${RELEASE_VERSION}.release.json
-s3cmd -P put METEOR@${RELEASE_VERSION}.release.json s3://meteor-warehouse/releases/
+$ VERSION=f8a73df913 RELEASE_VERSION=0.9.0-rc12 ./push.sh
