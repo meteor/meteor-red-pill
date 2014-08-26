@@ -4,4 +4,4 @@ files you have sitting around still)
 
 Then:
 
-$ VERSION=f8a73df913 RELEASE_VERSION=0.9.0-rc12 ./push.sh
+$ VERSION=a9f7d8d731 RELEASE_VERSION=0.9.0-rc12 ./push.sh
