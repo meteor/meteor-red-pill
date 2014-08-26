@@ -6,11 +6,6 @@ set -o pipefail
 # Do we already have packaging installed?  We can just exec it directly.
 # (This is probably being invoked via SpringboardToLatestRelease.)
 if [ -L "$HOME/.meteor/meteor" -a "$(readlink "$HOME/.meteor/meteor")" != "tools/latest/bin/meteor" ]; then
-  # Also delete the release file that told us about this, so that
-  # the new code doesn't springboard us back to it.
-  if [ -n "${METEOR_SPRINGBOARD_RELEASE:-}" ]; then
-    rm -f "$HOME/.meteor/releases/${METEOR_SPRINGBOARD_RELEASE}.release.json"
-  fi
   exec "$HOME/.meteor/meteor" "$@"
 fi
 
